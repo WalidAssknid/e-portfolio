@@ -286,22 +286,20 @@ const DetailsAboutMe = () => {
               <div className="mt-8 space-y-6">
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="/CV_EN.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300"
+                    href="/CV.pdf"
+                    download="Walid_Assknid_CV_2025.pdf"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300 group"
                   >
-                    <HiDocumentText className="text-xl" />
-                    <span>CV (English)</span>
+                    <HiDocumentText className="text-xl group-hover:scale-110 transition-transform duration-300" />
+                    <span>Download CV</span>
                   </a>
                   <a
-                    href="/CV_FR.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300"
+                    href="/CV_Walid_Assknid_N7.pdf"
+                    download="Walid_Assknid_CV_FR_2025.pdf"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300 group"
                   >
-                    <HiDocumentText className="text-xl" />
-                    <span>CV (Français)</span>
+                    <HiDocumentText className="text-xl group-hover:scale-110 transition-transform duration-300" />
+                    <span>Télécharger CV</span>
                   </a>
                 </div>
                 

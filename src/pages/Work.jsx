@@ -4,6 +4,7 @@ import Experiences from '../sections/Experiences'
 import InterMobility from '../sections/InterMobility'
 import SocialEng from '../sections/SocialEng'
 import Activities from '../sections/Activities'
+import EngCourses from '../components/EngCourses'
 
 const Work = () => {
   return (
@@ -13,6 +14,7 @@ const Work = () => {
       <InterMobility />
       <SocialEng />
       <Activities />
+      <EngCourses />
     </div>
   )
 }
