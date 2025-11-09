@@ -6,6 +6,8 @@ import { OrbitControls, Environment, PerspectiveCamera } from "@react-three/drei
 import * as THREE from "three";
 import { MoroccanIncenseBurner } from "../components/MoroccanIncenseBurner";
 import Loader from "../components/Loader";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiDocumentText } from "react-icons/hi";
 
 const DetailsAboutMe = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -147,20 +149,21 @@ const DetailsAboutMe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="grid-default-color rounded-2xl overflow-hidden relative group"
+            className="grid-default-color rounded-2xl overflow-hidden relative group h-[220px] lg:h-[300px]"
           >
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img
-                src="/walid.jpeg"
-                alt="Walid Assknid"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-indigo/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="text-white font-semibold text-lg">Walid Assknid</p>
-                <p className="text-white/80 text-sm">Computer Science Student</p>
-              </div>
+          <div className="relative overflow-hidden bg-gray-800 h-full flex items-center justify-center">
+            <img
+              src="/walid.jpeg"
+              alt="Walid Assknid"
+              className="max-w-full max-h-full object-contain object-center transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-indigo/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="text-white font-semibold text-lg">Walid Assknid</p>
+              <p className="text-white/80 text-sm">Computer Science Student</p>
             </div>
+          </div>
+
           </motion.div>
 
           {/* Video Section */}
@@ -169,9 +172,9 @@ const DetailsAboutMe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid-default-color rounded-2xl overflow-hidden relative group"
+            className="grid-default-color rounded-2xl overflow-hidden relative group h-[360px] lg:h-[520px]"
           >
-            <div className="relative aspect-video bg-black">
+            <div className="relative bg-black w-full h-full">
               <video
                 ref={videoRef}
                 src="/video.mp4"
@@ -277,6 +280,51 @@ const DetailsAboutMe = () => {
                 <p className="subtext text-sm italic">
                   "Technology is my craft, but my roots keep me grounded."
                 </p>
+              </div>
+
+              {/* CVs and Social Links */}
+              <div className="mt-8 space-y-6">
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="/CV_EN.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300"
+                  >
+                    <HiDocumentText className="text-xl" />
+                    <span>CV (English)</span>
+                  </a>
+                  <a
+                    href="/CV_FR.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300"
+                  >
+                    <HiDocumentText className="text-xl" />
+                    <span>CV (Français)</span>
+                  </a>
+                </div>
+                
+                <div className="flex gap-4 pt-4 border-t border-white/10">
+                  <a
+                    href="https://github.com/WalidAssknid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300"
+                  >
+                    <FaGithub className="text-xl" />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/walid-assknid/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo/20 hover:bg-indigo/30 transition-colors duration-300"
+                  >
+                    <FaLinkedin className="text-xl" />
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
